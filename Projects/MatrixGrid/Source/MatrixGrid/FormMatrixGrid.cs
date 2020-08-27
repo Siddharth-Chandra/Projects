@@ -145,5 +145,22 @@ namespace MatrixGrid
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CounterThread.Suspend();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CounterThread = new Thread(new ThreadStart(ThreadCounter));
+            CounterThread.Start();
+            bThreadStatus = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
